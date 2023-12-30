@@ -33,4 +33,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/proyectos/informepdf/{proyecto}', [App\Http\Controllers\ProyectoController::class, 'getPDF'])->name('proyectos.informepdf');
+
 require __DIR__.'/auth.php';

@@ -6,6 +6,8 @@ use App\Models\Proyecto;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+Use DB;
+Use PDF;
 
 class ProyectoController extends Controller
 {
@@ -53,6 +55,14 @@ class ProyectoController extends Controller
     {
         // Puedes cargar relaciones aquí si es necesario
         return view('proyectos.show', compact('proyecto'));
+    }
+
+    //generar pdf
+    public function getPDF(Proyecto $proyecto)
+    {
+        $pdf=PDF::loadView('proyectos.informepdf', compact('proyecto'));
+        // Puedes cargar relaciones aquí si es necesario
+        return $pdf->stream('proyecto.pdf');
     }
 
     //editar variables
