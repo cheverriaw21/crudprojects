@@ -15,7 +15,7 @@
 
                         <div class="mb-4">
                             <label for="NombreProyecto" class="block text-gray-700 text-sm font-bold mb-2">{{__('Nombre del Proyecto')}}</label>
-                            <input type="text" name="NombreProyecto" id="NombreProyecto" value="{{ old('NombreProyecto', $proyecto->NombreProyecto) }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700">
+                            <input type="text" name="NombreProyecto" id="NombreProyecto" value="{{ old('NombreProyecto', $proyecto->NombreProyecto) }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" required>
                             @error('NombreProyecto')
                                 <p class="text-red-500 text-xs italic">{{ $message }}</p>
                             @enderror
@@ -31,7 +31,7 @@
 
                         <div class="mb-4">
                             <label for="MontoPlanificado" class="block text-gray-700 text-sm font-bold mb-2">{{__('Monto Planificado')}}</label>
-                            <input type="number" name="MontoPlanificado" id="MontoPlanificado" value="{{ old('MontoPlanificado', $proyecto->MontoPlanificado) }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700">
+                            <input type="number" name="MontoPlanificado" id="MontoPlanificado" value="{{ old('MontoPlanificado', $proyecto->MontoPlanificado) }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" min="0" required >
                             @error('MontoPlanificado')
                                 <p class="text-red-500 text-xs italic">{{ $message }}</p>
                             @enderror
@@ -39,7 +39,7 @@
 
                         <div class="mb-4">
                             <label for="MontoPatrocinado" class="block text-gray-700 text-sm font-bold mb-2">{{__('Monto Patrocinado')}}</label>
-                            <input type="number" name="MontoPatrocinado" id="MontoPatrocinado" value="{{ old('MontoPatrocinado', $proyecto->MontoPatrocinado) }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700">
+                            <input type="number" name="MontoPatrocinado" id="MontoPatrocinado" value="{{ old('MontoPatrocinado', $proyecto->MontoPatrocinado) }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" min="0" required>
                             @error('MontoPatrocinado')
                                 <p class="text-red-500 text-xs italic">{{ $message }}</p>
                             @enderror
@@ -47,7 +47,7 @@
 
                         <div class="mb-4">
                             <label for="MontoFondosPropios" class="block text-gray-700 text-sm font-bold mb-2">{{__('Monto Fondos Propios')}}</label>
-                            <input type="number" name="MontoFondosPropios" id="MontoFondosPropios" value="{{ old('MontoFondosPropios', $proyecto->MontoFondosPropios) }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700">
+                            <input type="number" name="MontoFondosPropios" id="MontoFondosPropios" value="{{ old('MontoFondosPropios', $proyecto->MontoFondosPropios) }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" min="0" required>
                             @error('MontoFondosPropios')
                                 <p class="text-red-500 text-xs italic">{{ $message }}</p>
                             @enderror

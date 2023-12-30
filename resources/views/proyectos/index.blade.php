@@ -52,7 +52,7 @@
                         </table>
                     </div>
 
-                    <div class="flex justify-center mt-4">
+                    <div class="flex flex-col space-y-8 justify-center mt-4">
                         {{ $proyectos->links() }}
                     </div>
                 </div>

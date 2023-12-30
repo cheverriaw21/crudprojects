@@ -58,9 +58,9 @@ class ProyectoController extends Controller
     //editar variables
     public function edit(Proyecto $proyecto): Renderable
     {
-        $title = __('Editar proyecto');
+        $title = __('Editar Proyecto');
         $action = route('proyectos.update', $proyecto);
-        $buttonText = __('Actualizar proyecto');
+        $buttonText = __('Actualizar Proyecto');
 
         return view('proyectos.edit', compact('proyecto', 'title', 'action', 'buttonText'));
     }

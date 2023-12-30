@@ -29,7 +29,7 @@
 
                         <div class="mb-4">
                             <label for="MontoPlanificado" class="block text-sm font-semibold text-gray-800 dark:text-gray-800">Monto Planificado</label>
-                            <input type="number" name="MontoPlanificado" id="MontoPlanificado" class="w-full mt-1 p-2 border rounded-md" value="{{ old('MontoPlanificado') }}" required />
+                            <input type="number" name="MontoPlanificado" id="MontoPlanificado" class="w-full mt-1 p-2 border rounded-md" value="{{ old('MontoPlanificado') }}" min="0" required />
                             @error('MontoPlanificado')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                             @enderror
@@ -37,7 +37,7 @@
 
                         <div class="mb-4">
                             <label for="MontoPatrocinado" class="block text-sm font-semibold text-gray-800 dark:text-gray-800">Monto Patrocinado</label>
-                            <input type="number" name="MontoPatrocinado" id="MontoPatrocinado" class="w-full mt-1 p-2 border rounded-md" value="{{ old('MontoPatrocinado') }}" required />
+                            <input type="number" name="MontoPatrocinado" id="MontoPatrocinado" class="w-full mt-1 p-2 border rounded-md" value="{{ old('MontoPatrocinado') }}" min="0" required />
                             @error('MontoPatrocinado')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                             @enderror
@@ -45,7 +45,7 @@
 
                         <div class="mb-4">
                             <label for="MontoFondosPropios" class="block text-sm font-semibold text-gray-800 dark:text-gray-800">Monto Fondos Propios</label>
-                            <input type="number" name="MontoFondosPropios" id="MontoFondosPropios" class="w-full mt-1 p-2 border rounded-md" value="{{ old('MontoFondosPropios') }}" required />
+                            <input type="number" name="MontoFondosPropios" id="MontoFondosPropios" class="w-full mt-1 p-2 border rounded-md" value="{{ old('MontoFondosPropios') }}" min="0" required />
                             @error('MontoFondosPropios')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                             @enderror
