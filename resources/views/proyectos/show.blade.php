@@ -12,6 +12,7 @@
                     <p class="text-2xl font-semibold text-gray-800 dark:text-gray-800">Detalles del Proyecto:</p>
 
                     <ul class="list-disc ml-4 mt-4">
+                        <li class="mt-4"><strong>Id:</strong> {{ $proyecto->id }}</li>
                         <li class="mt-4"><strong>Nombre del Proyecto:</strong> {{ $proyecto->NombreProyecto }}</li>
                         <li class="mt-4"><strong>Fuente de Fondos:</strong> {{ $proyecto->fuenteFondos ?? 'N/A' }}</li>
                         <li class="mt-4"><strong>Monto Planificado:</strong> ${{ $proyecto->MontoPlanificado }}</li>

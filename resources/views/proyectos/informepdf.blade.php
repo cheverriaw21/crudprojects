@@ -36,13 +36,17 @@
             margin-bottom:30px;
         }
 
+        .centrar{
+            text-align:center;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1 class="title">Informe del Proyecto</h1>
-            <hr>
+            <hr><hr>
         </div>
         <div class="datos">
             <p>
@@ -51,8 +55,8 @@
                 <strong>Fecha: </strong>{{ now()->format('d/m/Y') }}
             </p>
         </div>
-
         <div class="content">
+            <h3 class="centrar">Detalles</h3>
             <p><strong>Id:</strong> {{ $proyecto->id }}</p>
             <p><strong>Nombre del Proyecto:</strong> {{ $proyecto->NombreProyecto }}</p>
             <p><strong>Fuente de Fondos:</strong> {{ $proyecto->fuenteFondos }}</p>
