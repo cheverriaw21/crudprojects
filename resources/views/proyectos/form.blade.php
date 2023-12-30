@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="mt-4">
-                            <button type="submit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" style="transition: background-color 0.3s ease-in-out;" onmouseover="this.style.backgroundColor='#4f46e5'" onmouseout="this.style.backgroundColor='#6366f1'">{{ $buttonText }}</button>
+                            <button type="submit" class="bg-green-700 hover:bg-green-950 text-white font-bold py-2 px-4 rounded">{{ $buttonText }}</button>
                             <a href="{{ route('proyectos.index') }}" class="bg-gray-300 hover:bg-gray-600 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" >
                                 Cancelar
                             </a>

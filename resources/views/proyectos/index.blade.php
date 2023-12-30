@@ -35,11 +35,11 @@
                                         <td class="border px-4 py-2">$ {{ $proyecto->MontoFondosPropios }}</td>
                                         <td class="border px-4 py-2" style="width: 260px">
                                             <form action="{{ route('proyectos.destroy', $proyecto) }}" method="POST" class="">
-                                                <a href="{{ route('proyectos.show', $proyecto) }}" class="text-white font-bold py-2 px-4 rounded" style="background-color: #3b82f6; transition: background-color 0.3s ease-in-out;" onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor='#3b82f6'">{{__('Ver')}}</a>
-                                                <a href="{{ route('proyectos.edit', $proyecto) }}" class="text-white font-bold py-2 px-4 rounded" style="background-color: #eab308; transition: background-color 0.3s ease-in-out;" onmouseover="this.style.backgroundColor='#854d0e'" onmouseout="this.style.backgroundColor='#eab308'">{{__('Editar')}}</a>
+                                                <a href="{{ route('proyectos.show', $proyecto) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{__('Ver')}}</a>
+                                                <a href="{{ route('proyectos.edit', $proyecto) }}" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded" >{{__('Editar')}}</a>
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="text-white font-bold py-2 px-4 rounded" style="background-color: #ef4444; transition: background-color 0.3s ease-in-out;" onmouseover="this.style.backgroundColor='#b91c1c'" onmouseout="this.style.backgroundColor='#ef4444'">{{__('Eliminar')}}</button>
+                                                <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">{{__('Eliminar')}}</button>
                                             </form>
                                         </td>
                                     </tr>
