@@ -11,7 +11,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <div class="flex justify-between items-center">
                         <h1 class="text-2xl font-bold">{{__('Proyectos')}}</h1>
-                        <a href="{{ route('proyectos.create') }}" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" style="background-color: #6366f1; transition: background-color 0.3s ease-in-out;" onmouseover="this.style.backgroundColor='#4f46e5'" onmouseout="this.style.backgroundColor='#6366f1'">{{__('Nuevo Proyecto')}}</a>
+                        <a href="{{ route('proyectos.create') }}" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" >{{__('Nuevo Proyecto')}}</a>
                     </div>
                     <div class="mt-4">
                         <table class="w-full">
@@ -30,9 +30,9 @@
                                     <tr>
                                         <td class="border px-4 py-2">{{ $proyecto->NombreProyecto }}</td>
                                         <td class="border px-4 py-2">{{ $proyecto->fuenteFondos }}</td>
-                                        <td class="border px-4 py-2">{{ $proyecto->MontoPlanificado }}</td>
-                                        <td class="border px-4 py-2">{{ $proyecto->MontoPatrocinado }}</td>
-                                        <td class="border px-4 py-2">{{ $proyecto->MontoFondosPropios }}</td>
+                                        <td class="border px-4 py-2">$ {{ $proyecto->MontoPlanificado }}</td>
+                                        <td class="border px-4 py-2">$ {{ $proyecto->MontoPatrocinado }}</td>
+                                        <td class="border px-4 py-2">$ {{ $proyecto->MontoFondosPropios }}</td>
                                         <td class="border px-4 py-2" style="width: 260px">
                                             <form action="{{ route('proyectos.destroy', $proyecto) }}" method="POST" class="">
                                                 <a href="{{ route('proyectos.show', $proyecto) }}" class="text-white font-bold py-2 px-4 rounded" style="background-color: #3b82f6; transition: background-color 0.3s ease-in-out;" onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor='#3b82f6'">{{__('Ver')}}</a>
